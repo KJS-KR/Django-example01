@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+  </head>
+  <body>
+    <form method="POST" action="{% url "users:survey" %}">{% csrf_token %}
+        
+      <p>1. 당신의 나이대를 선택하세요.</p>
+      <label><input type="radio" name="age" value="만 18세미만" /> 만 18세미만</label><br>
+      <label><input type="radio" name="age" value="만 19~40세미만" /> 만 19~40세미만</label><br>
+      <label><input type="radio" name="age" value="만 40세이상" /> 만 40세이상</label><br>
+
+      <p>2. 당신의 성별을 선택하세요.</p>
+      <label><input type="radio" name="gender" value="남자" /> 남자</label><br>
+      <label><input type="radio" name="gender" value="여자" /> 여자</label><br>
+
+      <p>3. 현재 안경 또는 렌즈를 착용중인지 선택하세요.(중복선택가능)</p>
+      <label><input type="checkbox" name="lense[]" value="하드렌즈(RGP렌즈)" /> 하드렌즈(RGP렌즈)</label><br>
+      <label><input type="checkbox" name="lense[]" value="소프트렌즈(컬러렌즈포함)" /> 소프트렌즈(컬러렌즈포함)</label><br>
+      <label><input type="checkbox" name="lense[]" value="드림렌즈" /> 드림렌즈</label><br>
+      <label><input type="checkbox" name="lense[]" value="기타" /> 기타</label><br>
+
+      <p>4. 현재 약물을 복용중이거나 진단받은 질환을 선택하세요.(중복선택가능)</p>
+      <label><input type="checkbox" name="medicine[]" value="당뇨" /> 당뇨</label><br>
+      <label><input type="checkbox" name="medicine[]" value="고혈압" /> 고혈압</label><br>
+      <label><input type="checkbox" name="medicine[]" value="고지혈증" /> 고지혈증</label><br>
+      <label><input type="checkbox" name="medicine[]" value="갑상선질환" /> 갑상선질환</label><br>
+      <label><input type="checkbox" name="medicine[]" value="자가면역질환" /> 자가면역질환</label><br>
+      <label><input type="checkbox" name="medicine[]" value="기타질환, 기타약물복용, 점안" /> 기타질환, 기타약물복용, 점안</label><br>
+
+      <p>5. 과거에 눈과 관련된 진단받은 병력에 대해 선택하세요.(중복선택가능)</p>
+      <label><input type="checkbox" name="past[]" value="백내장" /> 백내장</label><br>
+      <label><input type="checkbox" name="past[]" value="녹내장" /> 녹내장</label><br>
+      <label><input type="checkbox" name="past[]" value="당뇨망막병증" /> 당뇨망막병증</label><br>
+      <label><input type="checkbox" name="past[]" value="기타망막질환" /> 기타망막질환</label><br>
+      <label><input type="checkbox" name="past[]" value="색맹" /> 색맹</label><br>
+      <label><input type="checkbox" name="past[]" value="사시" /> 사시</label><br>
+      <label><input type="checkbox" name="past[]" value="감염질환(ex. 눈병, 안구건조, 눈염증)" /> 감염질환(ex. 눈병, 안구건조, 눈염증)</label><br>
+
+      <p>6. 안구에 관련된 수술병력을 선택하세요.(중복선택가능)</p>
+      <label><input type="checkbox" name="surgical[]" value="백내장" /> 백내장</label><br>
+      <label><input type="checkbox" name="surgical[]" value="라식, 라섹" /> 라식, 라섹</label><br>
+      <label><input type="checkbox" name="surgical[]" value="사시" /> 사시</label><br>
+      <label><input type="checkbox" name="surgical[]" value="망막관련수술" /> 망막관련수술</label><br>
+      <label><input type="checkbox" name="surgical[]" value="안와관련수술" /> 안와관련수술</label><br>
+      <label><input type="checkbox" name="surgical[]" value="안검관련수술" /> 안검관련수술</label><br>
+      <label><input type="checkbox" name="surgical[]" value="기타질환수술" /> 기타질환수술</label><br>
+
+      <p>7. 가족들 중 아래 질환에 대해 앓고있거나 치료받고 있는 경우 해당 질환을 선택하세요.(중복선택가능)</p>
+      <label><input type="checkbox" name="family[]" value="녹내장" /> 녹내장</label><br>
+      <label><input type="checkbox" name="family[]" value="당뇨" /> 당뇨</label><br>
+      <label><input type="checkbox" name="family[]" value="고혈압" /> 고혈압</label><br>
+      <label><input type="checkbox" name="family[]" value="결핵" /> 결핵</label><br>
+      <label><input type="checkbox" name="family[]" value="망막관련질환" /> 망막관련질환</label><br>
+      <label><input type="checkbox" name="family[]" value="감염성질환(눈병, 대상포진등)" /> 감염성질환(눈병, 대상포진등)</label><br>
+
+    <button>완료</button>
+
+    </form>
+
+  </body>
+</html>

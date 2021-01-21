@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "/home/vcfdregg3/.local/share/virtualenvs/survey-sF5GQtDa/bin/python",
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylinkEnabled": false,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "python.linting.flake8Args": [
+        "--max-line-length=88"
+    ]
+}

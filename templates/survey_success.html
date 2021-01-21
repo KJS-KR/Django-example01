@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>survey_success</title>
+  </head>
+  <body>
+    <p>1. 당신의 나이대를 선택하세요.</p>
+    <div>{{form.ans_01}}</div>
+
+    <p>2. 당신의 성별을 선택하세요.</p>
+    <div>{{form.ans_02}}</div>
+
+    <p>3. 현재 안경 또는 렌즈를 착용중인지 선택하세요.(중복선택가능)</p>
+    <div style="margin-bottom: 10px">
+      {% for item in form.ans_03 %}
+      <div>{{item}}</div>
+
+      {% endfor %}
+    </div>
+
+    <p>4. 현재 약물을 복용중이거나 진단받은 질환을 선택하세요.(중복선택가능)</p>
+    <div style="margin-bottom: 10px">
+      {% for item in form.ans_04 %}
+      <div>{{item}}</div>
+
+      {% endfor %}
+    </div>
+
+    <p>5. 과거에 눈과 관련된 진단받은 병력에 대해 선택하세요.(중복선택가능)</p>
+    <div style="margin-bottom: 10px">
+      {% for item in form.ans_05 %}
+      <div>{{item}}</div>
+
+      {% endfor %}
+    </div>
+
+    <p>6. 안구에 관련된 수술병력을 선택하세요.(중복선택가능)</p>
+    <div style="margin-bottom: 10px">
+      {% for item in form.ans_06 %}
+      <div>{{item}}</div>
+
+      {% endfor %}
+    </div>
+
+    <p>
+      7. 가족들 중 아래 질환에 대해 앓고있거나 치료받고 있는 경우 해당 질환을
+      선택하세요.(중복선택가능)
+    </p>
+    <div style="margin-bottom: 10px">
+      {% for item in form.ans_07 %}
+      <div>{{item}}</div>
+
+      {% endfor %}
+    </div>
+  </body>
+</html>
